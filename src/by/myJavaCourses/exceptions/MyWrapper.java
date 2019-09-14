@@ -28,9 +28,9 @@ public class MyWrapper {
 	}
 
 	public void set(Object ob) {
-		if (ob == "String") {
-			myClass.setName("String");
-		} else if (ob == new Integer(0)) {
+		if (ob instanceof String) {
+			myClass.setName("Str");
+		} else if (ob instanceof Integer) {
 			myClass.setIntValue(new Integer(0));
 		} else {
 			throw new RuntimeException();

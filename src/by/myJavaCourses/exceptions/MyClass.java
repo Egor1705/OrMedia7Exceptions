@@ -7,14 +7,15 @@ public class MyClass {
 	private int intValue;
 	private String name;
 
-	
-
 	public void firstMethod() throws AnotherException1, AnotherException2 {
 		Random r = new Random();
-		if (r.nextInt(10) <= 4) {
-			if ((int) (Math.random() * 4) <= 1) {
+		int rand = 1 + r.nextInt(100);
+		if (rand <= 50) {
+			if (rand <= 25) {
+
 				throw new AnotherException1();
 			} else {
+
 				throw new AnotherException2();
 			}
 		} else {
