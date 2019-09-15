@@ -29,9 +29,11 @@ public class MyWrapper {
 
 	public void set(Object ob) {
 		if (ob instanceof String) {
-			myClass.setName("Str");
+			myClass.setName(ob.toString());
+			
 		} else if (ob instanceof Integer) {
-			myClass.setIntValue(new Integer(0));
+			myClass.setIntValue(((Integer) ob).intValue());
+			
 		} else {
 			throw new RuntimeException();
 		}
